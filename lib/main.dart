@@ -34,13 +34,20 @@ class MyHome extends StatelessWidget {
               SizedBox(width: 20,)
               ],
             ),
-            body: SingleChildScrollView(
-              child: Container(
-                padding: const EdgeInsets.all(20.0),
-                child: const Column(
-                  children: [],
+            body: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  margin: EdgeInsets.only(top: 10, left: 20),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
                 ),
-              ),
+              ]
             ),
           );();
   }
