@@ -24,8 +24,15 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
             appBar: AppBar(
-              title: const Text("Dashboard"),
-              actions: const [],
+              title: Text("Ini title"),
+              backgroundColor: Colors.blue,
+              actions: [
+              Icon(Icons.person, color: Colors.white),
+              SizedBox(width: 10,),
+              Icon(Icons.account_tree),
+              Icon(Icons.ac_unit),
+              SizedBox(width: 20,)
+              ],
             ),
             body: SingleChildScrollView(
               child: Container(
