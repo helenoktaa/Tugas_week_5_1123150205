@@ -48,14 +48,12 @@ class MyHome extends StatelessWidget {
             ),
             child: Text(
               "Ini adalah teks didalam container",
-              style: TextStyle(
-                color: Colors.white, 
-                fontSize: 16
-                ),
+              style: TextStyle(color: Colors.white, fontSize: 16),
             ),
           ),
 
           Container(
+            transform: Matrix4.rotationZ(0.1),
             width: 100,
             height: 100,
             margin: EdgeInsets.only(top: 10, left: 20),
@@ -63,9 +61,32 @@ class MyHome extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.blue,
               borderRadius: BorderRadius.circular(10.0),
+              border: Border.all(color: Colors.black, width: 2),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 2,
+                  blurRadius: 5,
+                  offset: Offset(0, 3),
+                ),
+              ],
             ),
-          )
+          ),
 
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.only(top: 20, left: 20),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: Text(
+              "Ini adalah teks didalam container",
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+          ),
         ],
       ),
     );
