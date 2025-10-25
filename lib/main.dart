@@ -23,32 +23,40 @@ class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            appBar: AppBar(
-              title: Text("Ini title"),
-              backgroundColor: Colors.blue,
-              actions: [
-              Icon(Icons.person, color: Colors.white),
-              SizedBox(width: 10,),
-              Icon(Icons.account_tree),
-              Icon(Icons.ac_unit),
-              SizedBox(width: 20,)
-              ],
+      appBar: AppBar(
+        title: Text("Ini title"),
+        backgroundColor: Colors.blue,
+        actions: [
+          Icon(Icons.person, color: Colors.white),
+          SizedBox(width: 10),
+          Icon(Icons.account_tree),
+          Icon(Icons.ac_unit),
+          SizedBox(width: 20),
+        ],
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            margin: EdgeInsets.only(top: 10, left: 20),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              borderRadius: BorderRadius.circular(10.0),
             ),
-            body: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  width: 100,
-                  height: 100,
-                  margin: EdgeInsets.only(top: 10, left: 20),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
+            child: Text(
+              "Ini adalah teks didalam container",
+              style: TextStyle(
+                color: Colors.white, 
+                fontSize: 16
                 ),
-              ]
             ),
-          );();
+          ),
+        ],
+      ),
+    );
+    ();
   }
 }
