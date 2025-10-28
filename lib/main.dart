@@ -59,9 +59,13 @@ class MyHome extends StatelessWidget {
             margin: EdgeInsets.only(top: 10, left: 20),
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: Colors.blue,
+              gradient: const LinearGradient(
+                colors: [Colors.blue, Colors.purple],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
               borderRadius: BorderRadius.circular(10.0),
-              border: Border.all(color: Colors.black, width: 2),
+              border: Border.all(color: Colors.black, width: 1),
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.5),
@@ -73,23 +77,23 @@ class MyHome extends StatelessWidget {
             ),
           ),
 
+          //child: Image.network('assets/images/download.jfif'),
           Container(
+            transform: Matrix4.rotationZ(-0.1),
             width: 100,
             height: 100,
-            margin: EdgeInsets.only(top: 20, left: 20),
+            margin: EdgeInsets.only(top: 30, left: 20),
             alignment: Alignment.center,
             decoration: BoxDecoration(
               color: Colors.blue,
               borderRadius: BorderRadius.circular(10.0),
-            ),
-            child: Text(
-              "Ini adalah teks didalam container",
-              style: TextStyle(color: Colors.white, fontSize: 16),
+              image: DecorationImage(
+                image: AssetImage('assets/images/removebg.png'),
+              ),
             ),
           ),
         ],
       ),
     );
-    ();
   }
 }
